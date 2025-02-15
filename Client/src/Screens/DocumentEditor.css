@@ -1,0 +1,131 @@
+body{
+  background-color: #a19d9d;
+}
+
+.document-editor {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .document-editor h1 {
+    font-size: 2rem;
+    color: #e3dede;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .document-editor textarea {
+    width: 100%;
+    min-height: 500px;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    background-color: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  
+  .document-editor textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  }
+  
+  .document-editor textarea::placeholder {
+    color: #94a3b8;
+  }
+  
+  .loading-state {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
+    font-size: 1.125rem;
+  }
+  
+  .error-state {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: 0.5rem;
+    color: #dc2626;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .document-editor {
+      margin: 1rem auto;
+    }
+  
+    .document-editor h1 {
+      font-size: 1.5rem;
+    }
+  
+    .document-editor textarea {
+      min-height: 300px;
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    .document-editor h1 {
+      color: #e2e8f0;
+    }
+  
+    .document-editor textarea {
+      background-color: #1a1a1a;
+      border-color: #2d2d2d;
+      color: #e2e8f0;
+    }
+  
+    .document-editor textarea:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+  
+    .document-editor textarea::placeholder {
+      color: #64748b;
+    }
+  
+    .loading-state {
+      color: #94a3b8;
+    }
+  
+    .error-state {
+      background-color: #450a0a;
+      border-color: #7f1d1d;
+      color: #fecaca;
+    }
+  }
+
+  .back-button {
+    background-color: transparent; /* Transparent background */
+    color: #e74c3c; /* Red text */
+    border: 2px solid #e74c3c; /* Red border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e74c3c; /* Red background on hover */
+    color: white; /* White text on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:active {
+    background-color: #c0392b; /* Darker red when clicked */
+    border-color: #c0392b; /* Darker border when clicked */
+    transform: translateY(0);
+}
